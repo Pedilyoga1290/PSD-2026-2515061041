@@ -9,82 +9,104 @@ Deskripsi : Kode Python ini menjalankan sebuah sistem pemutar musik sederhana ya
 
 Deskripsi baris kode :
 
-1. `class SongNode:` - Mendefinisikan kelas node untuk merepresentasikan lagu-lagu individual dalam linked list.
-2. `def __init__(self, title):` - Pembangun yang menginisialisasi node lagu dengan sebuah judul.
-3. `self.title = title` - Menyimpan judul lagu di dalam node.
-4. `self.next = None` - Penunjuk ke lagu berikutnya dalam daftar putar (awalnya kosong).
-5. `self.prev = None` - Penunjuk ke lagu sebelumnya untuk navigasi dua arah.
-6. `class SmartPlayer:` - Main class yang mengelola pemutar musik dan daftar putar.
-7. `def __init__(self):` - Menginisialisasi pemain dengan referensi kosong.
-8. `self.head = None` - Menunjuk ke lagu pertama dalam daftar putar.
-9. `self.tail = None` - Menunjuk ke lagu terakhir dalam daftar putar.
-10. `self.current = None` - Melacak lagu yang sedang diputar saat ini.
-11. `def add_song(self, title):` - Cara menambahkan lagu baru ke daftar putar.
-12. `new_song = SongNode(title)` - Membuat node lagu baru dengan judul yang diberikan.
-13. `if self.head is None:` - Mengecek apakah daftar putar kosong.
-14. `self.head = new_song` - Menetapkan lagu baru sebagai lagu pertama jika daftar putar kosong.
-15. `self.tail = new_song` - Juga menempatkannya sebagai lagu terakhir.
-16. `self.current = new_song` - Mengaturnya sebagai lagu yang sedang diputar.
-17. `return` -Mengakhiri fungsi lebih awal saat menambahkan ke daftar putar kosong.
-18. `self.tail.next = new_song` - Menghubungkan lagu terakhir yang diputar dengan lagu baru.
-19. `new_song.prev = self.tail` - Menghubungkan lagu baru kembali ke lagu terakhir sebelumnya.
-20. `self.tail = new_song` - Memperbarui referensi ekor ke lagu yang baru ditambahkan.
-21. `def now_playing(self):` - Menampilkan lagu yang sedang diputar.
-22. `if self.current:` - Memeriksa apakah ada lagu yang sedang diputar.
-23. `print(f"\nSEDANG DIPUTAR: {self.current.title}")` - Menampilkan judul lagu yang sedang diputar dalam bahasa Indonesia.
-24. `else:` - Dieksekusi jika tidak ada lagu yang sedang diputar.
-25. `print("\nPlaylist masih kosong.")` - Menampilkan pesan yang menunjukkan bahwa daftar putar kosong.
-26. `def play_next(self):` -Beralih ke lagu berikutnya dalam daftar putar.
-27. `if self.current and self.current.next:` - Memeriksa apakah ada lagu yang sedang diputar dan lagu berikutnya yang tersedia.
-28. `self.current = self.current.next` - Mengupdate lagu saat ini hingga lagu berikutnya.
-29. `print(f"\n⏭️ Beralih ke lagu selanjutnya...")` - Mencetak pesan "beralih ke lagu selanjutnya".
-30. `self.now_playing()` - Menampilkan lagu yang baru saja diputar.
-31. `else:` - Akan dieksekusi jika lagu terakhir diputar atau tidak ada lagu yang sedang diputar.
-32. `print("\n Ini adalah lagu terakhir di playlist. Tidak ada lagu selanjutnya.")` - Memberi tahu pengguna bahwa mereka sedang mendengarkan lagu terakhir.
-33. `def play_prev(self):` - Beralih ke lagu sebelumnya dalam playlist.
-34. `if self.current and self.current.prev:` - Memeriksa apakah ada lagu yang sedang diputar dan lagu sebelumnya yang tersedia.
-35. `self.current = self.current.prev` - Mengupdate lagu sesuai dengan lagu sebelumnya.
-36. `print(f"\n⏮ Beralih ke lagu sebelumnya...")` - Mencetak pesan "Beralih ke lagu sebelumnya...".
-37. `self.now_playing()` - Menampilkan lagu yang baru saja diputar.
-38. `else:` - Akan dieksekusi jika lagu pertama sedang diputar atau tidak ada lagu yang sedang diputar.
-39. `print("\n Ini adalah lagu pertama. Tidak ada lagu sebelumnya.")` - Memberi tahu pengguna bahwa mereka sedang berada di lagu pertama.
-40. `def show_playlist(self):` - Menampilkan semua lagu dalam daftar putar.
-41. `if self.head is None:` - Memeriksa apakah daftar putar kosong.
-42. `print("\nPlaylist kosong.")` - Mencetak pesan bahwa playlist kosong.
-43. `return` - Mengakhiri fungsi lebih awal jika playlist kosong.
-44. `print("\n--- DAFTAR PLAYLIST ---")` - Mencetak header untuk tampilan playlist.
-45. `temp = self.head` - Membuat penunjuk sementara yang dimulai dari lagu pertama.
-46. `nomor = 1` - Menginisialisasi penghitung untuk menomori lagu.
-47. `while temp:` - Memutar semua lagu dalam daftar putar secara berulang.
-48. `if temp == self.current:` - Memeriksa apakah node saat ini adalah lagu yang sedang diputar.
-49. `print(f"{nomor}. [▶] {temp.title}")` - Menampilkan lagu yang sedang diputar dengan indikator pemutaran.
-50. `else:` - Dieksekusi untuk lagu-lagu yang bukan lagu terbaru.
-51. `print(f"{nomor}.     {temp.title}")` - Menampilkan lagu-lagu yang sudah tidak diputar tanpa indikator.
-52. `temp = temp.next` - Beralih ke lagu berikutnya.
-53. `nomor += 1` - Menambah jumlah lagu yang dihitung.
-54. `print("-----------------------")` - Mencetak footer untuk tampilan daftar putar.
-55. `if __name__ == "__main__":` - Memastikan kode ini hanya berjalan saat skrip dieksekusi secara langsung.
-56. `player = SmartPlayer()` - Membuat instance pemutar musik baru.
-57-59. `player.add_song(...)` - Menambahkan tiga lagu awal ke daftar putar.
-60. `while True:` - Memulai infinite loop untuk menu interaktif.
-61. `player.now_playing()` - Menampilkan lagu yang sedang diputar sebelum menampilkan menu.
-62-67. `print(...)` - Menampilkan pilihan menu bernomor 1-5.
-68. `pilihan = input("Pilih aksi (1-5): ")` - Menerima pilihan menu dari pengguna sebagai input.
-69. `if pilihan == '1':` - Memeriksa apakah pengguna ingin menambahkan lagu baru.
-70. `judul_lagu = input("Masukkan judul lagu beserta penyanyinya: ")` -Meminta pengguna untuk memasukkan judul lagu.
-71. `player.add_song(judul_lagu)` - Menambahkan lagu yang dimasukkan ke dalam daftar putar.
-72. `print(f"Berhasil menambahkan '{judul_lagu}' ke playlist")` - Memastikan lagu tersebut telah ditambahkan.
-73. `elif pilihan == '2':` - Memeriksa apakah pengguna ingin melompati ke lagu berikutnya.
-74. `player.play_next()` - Langsung beralih ke lagu berikutnya.
-75. `elif pilihan == '3':` - Memeriksa apakah pengguna ingin melompati ke lagu sebelumnya.
-76. `player.play_prev()` - Melompat ke lagu sebelumnya.
-77. `elif pilihan == '4':` - Memeriksa apakah pengguna ingin melihat daftar putar.
-78. `player.show_playlist()` - Menampilkan semua lagu dalam daftar putar.
-79. `elif pilihan == '5':` - Memeriksa apakah pengguna ingin keluar dari program.
-80. `print("Mematikan Musik.")` - Mencetak pesan perpisahan.
-81. `break` - Keluar dari perulangan tak terbatas dan mengakhiri program.
-82. `else:` - Dieksekusi untuk setiap pilihan menu yang tidak valid.
-83. `print("Pilihan tidak valid.")` - Menampilkan pesan pilihan tidak valid.
+1. Mendefinisikan kelas node untuk merepresentasikan lagu-lagu individual dalam linked list.
+2. Pembangun yang menginisialisasi node lagu dengan sebuah judul.
+3. Menyimpan judul lagu di dalam node.
+4. Penunjuk ke lagu berikutnya dalam daftar putar (awalnya kosong).
+5. Penunjuk ke lagu sebelumnya untuk navigasi dua arah.
+6. 
+7. Main class yang mengelola pemutar musik dan daftar putar.
+8. Menginisialisasi pemain dengan referensi kosong.
+9. Menunjuk ke lagu pertama dalam daftar putar.
+10. Menunjuk ke lagu terakhir dalam daftar putar.
+11. Melacak lagu yang sedang diputar saat ini.
+12. 
+13. Cara menambahkan lagu baru ke daftar putar.
+14. Membuat node lagu baru dengan judul yang diberikan.
+15. 
+16. Mengecek apakah daftar putar kosong.
+17. Menetapkan lagu baru sebagai lagu pertama jika daftar putar kosong.
+18. Juga menempatkannya sebagai lagu terakhir.
+19. Mengaturnya sebagai lagu yang sedang diputar.
+20. Mengakhiri fungsi lebih awal saat menambahkan ke daftar putar kosong.
+21. 
+22. Menghubungkan lagu terakhir yang diputar dengan lagu baru.
+23. Menghubungkan lagu baru kembali ke lagu terakhir sebelumnya.
+24. Memperbarui referensi ekor ke lagu yang baru ditambahkan.
+25. 
+26. Menampilkan lagu yang sedang diputar.
+27. Memeriksa apakah ada lagu yang sedang diputar.
+28. Menampilkan judul lagu yang sedang diputar.
+29. Dieksekusi jika tidak ada lagu yang sedang diputar.
+30. Menampilkan pesan yang menunjukkan bahwa daftar putar kosong.
+31. 
+32. Beralih ke lagu berikutnya dalam daftar putar.
+33. Memeriksa apakah ada lagu yang sedang diputar dan lagu berikutnya yang tersedia.
+34. Mengupdate lagu saat ini hingga lagu berikutnya.
+35. Mencetak pesan "beralih ke lagu selanjutnya".
+36. Menampilkan lagu yang baru saja diputar.
+37. Akan dieksekusi jika lagu terakhir diputar atau tidak ada lagu yang sedang diputar.
+38. Memberi tahu pengguna bahwa mereka sedang mendengarkan lagu terakhir.
+39. 
+40. Beralih ke lagu sebelumnya dalam playlist.
+41. `Memeriksa apakah ada lagu yang sedang diputar dan lagu sebelumnya yang tersedia.
+42. `Mengupdate lagu sesuai dengan lagu sebelumnya.
+43. Mencetak pesan "Beralih ke lagu sebelumnya...".
+44. Menampilkan lagu yang baru saja diputar.
+45. Akan dieksekusi jika lagu pertama sedang diputar atau tidak ada lagu yang sedang diputar.
+46. Memberi tahu pengguna bahwa mereka sedang berada di lagu pertama.
+47. 
+48. Menampilkan semua lagu dalam daftar putar.
+49. Memeriksa apakah daftar putar kosong.
+50. Mencetak pesan bahwa playlist kosong.
+51. Mengakhiri fungsi lebih awal jika playlist kosong.
+52. 
+53. Mencetak header untuk tampilan playlist.
+54. Membuat penunjuk sementara yang dimulai dari lagu pertama.
+55. Menginisialisasi penghitung untuk menomori lagu.
+56. Memutar semua lagu dalam daftar putar secara berulang.
+57. Memeriksa apakah node saat ini adalah lagu yang sedang diputar.
+58. Menampilkan lagu yang sedang diputar dengan indikator pemutaran.
+59. Dieksekusi untuk lagu-lagu yang bukan lagu terbaru.
+60. Menampilkan lagu-lagu yang sudah tidak diputar tanpa indikator.
+61. Beralih ke lagu berikutnya.
+62. Menambah jumlah lagu yang dihitung.
+63. Mencetak footer untuk tampilan daftar putar.
+64. 
+65. Memastikan kode ini hanya berjalan saat skrip dieksekusi secara langsung.
+66. Membuat instance pemutar musik baru.
+67. 
+68. Menambahkan lagu ke Playlist.
+69. Menambahkan lagu ke Playlist.
+70. Menambahkan lagu ke playlist.
+71. 
+72. Memulai infinite loop untuk menu interaktif.
+73. Menampilkan lagu yang sedang diputar sebelum menampilkan menu.
+74. 
+75. Menampilkan nama aplikasi.
+76. Menampilkan Opsi pertama, yaitu menambah lagu
+77. Menampilkan Opsi kedua, yaitu Lagu selanjutnya (next song)
+78. Menampilkan Opsi ketiga, yaitu Lagu sebelumnya (previous song)
+79. Menampilkan Opsi keempat, yaitu Cek isi Playlist
+80. Menampilkan Opsi kelima, yaitu Mematikan musik (end program)
+81. 
+82. Menerima pilihan menu dari pengguna sebagai input.
+83. 
+84. Memeriksa apakah pengguna ingin menambahkan lagu baru.
+85. Meminta pengguna untuk memasukkan judul lagu.
+86. Menambahkan lagu yang dimasukkan ke dalam daftar putar.
+87. Memastikan lagu tersebut telah ditambahkan.
+88.  Memeriksa apakah pengguna ingin melompati ke lagu berikutnya.
+89.  Langsung beralih ke lagu berikutnya.
+90.  Memeriksa apakah pengguna ingin melompati ke lagu sebelumnya.
+91.  Melompat ke lagu sebelumnya.
+92.  Memeriksa apakah pengguna ingin melihat daftar putar.
+93.  Menampilkan semua lagu dalam daftar putar.
+94.  Memeriksa apakah pengguna ingin keluar dari program.
+95.  Mencetak pesan "Mematikan musik"
+96.  Keluar dari perulangan tak terbatas dan mengakhiri program.
+97.  Dieksekusi untuk setiap pilihan menu yang tidak valid.
+98. Menampilkan pesan pilihan tidak valid.
 
 Output Program :
 
@@ -126,3 +148,5 @@ Indikator Khusus: Lagu yang sedang dipilih (node current) akan ditandai dengan s
 E. Opsi 5: Matikan Musik
 Output: Mematikan Musik.
 Berfungsi untuk menghentikan perulangan dan menutup program.
+
+Link Presentasi : https://youtu.be/J_E6VLYEvP0
