@@ -6,3 +6,10 @@ Deskripsi : Kode Python ini menjalankan sebuah sistem pemutar musik sederhana ya
 <img width="1167" height="597" alt="image" src="https://github.com/user-attachments/assets/ac96fb76-d83c-477c-9ca3-a040b8955ea6" />
 <img width="1163" height="596" alt="image" src="https://github.com/user-attachments/assets/0596e65a-7091-45cd-8870-f4921fb7b097" />
 <img width="370" height="108" alt="image" src="https://github.com/user-attachments/assets/0dc545b9-4eb7-4d82-9ac4-115601f1a37f" />
+
+Deskripsi baris kode :
+1.
+2.
+3.
+4.
+5.
