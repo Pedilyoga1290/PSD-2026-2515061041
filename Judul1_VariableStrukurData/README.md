@@ -104,13 +104,16 @@ Program ini menggunakan looping (while True), jadinya program akan terus berjala
 A. Tampilan "Now Playing"
 Setiap kali menu muncul, program akan memanggil now_playing().
 Output: SEDANG DIPUTAR: [Judul Lagu]
+
 Secara default, saat baru dinyalakan, lagu pertama yang muncul adalah "Bohemian Rhapsody".
 B. Opsi 1: Tambah Lagu Baru
 Jika pengguna menginput angka 1 di menu, Lagu baru ditambahkan di akhir daftar (tail) dan menambahkan '[Judul]' ke playlist
+
 C. Opsi 2 & 3: Navigasi (Next & Prev)
 Berfungsi sebagai pointer untuk traverse forward dan traverse backward
 Next: Jika ada lagu setelahnya, penunjuk current berpindah ke next. Jika di lagu terakhir, muncul pesan: "Ini adalah lagu terakhir di playlist."
 Prev: Jika ada lagu sebelumnya, penunjuk current berpindah ke prev. Jika di lagu pertama, muncul pesan: "Ini adalah lagu pertama."
+
 D. Opsi 4: Lihat Daftar Playlist
 Fungsi show_playlist() mencetak semua lagu yang ada di memori.
 Indikator Khusus: Lagu yang sedang dipilih (node current) akan ditandai dengan simbol [▶]. Output dari opsi 4 akan terlihat sebagai berikut :
@@ -119,6 +122,7 @@ Indikator Khusus: Lagu yang sedang dipilih (node current) akan ditandai dengan s
 2.      Metallica - For Whom The Bell Tolls
 3.      Tame Impala - Let It Happen
 -----------------------
+
 E. Opsi 5: Matikan Musik
 Output: Mematikan Musik.
 Berfungsi untuk menghentikan perulangan dan menutup program.
