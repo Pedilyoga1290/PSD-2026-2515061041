@@ -26,26 +26,26 @@ Program ini bertujuan untuk mengurutkan lagu yang ada di playlist untuk berurut 
 18. Mengatur pointer prev dari node baru ke ekor saat ini.
 19. Memperbarui ekor ke node baru.
 20. -
-21. 
-22. 
-23. 
-24. 
-25. 
-26. 
-27. 
+21. Memulai definisi metode tampilan untuk mencetak daftar putar.      
+22. Menginisialisasi penunjuk sementara ke kepala daftar putar.
+23. Membuat daftar kosong untuk menyimpan judul lagu.
+24. Memulai perulangan untuk menelusuri daftar putar selama masih ada node.
+25. Menambahkan judul node saat ini ke daftar lagu.
+26. Memindahkan penunjuk sementara ke node berikutnya.
+27. Mencetak lagu-lagu yang dipisahkan oleh " -> " jika ada lagu, jika tidak, mencetak "Daftar Putar Kosong".
 28. -
-29. 
-30. 
-31. 
+29. Memulai definisi fungsi bubble_sort untuk mengurutkan daftar putar secara alfabetis.
+30. Memeriksa apakah daftar putar kosong atau hanya berisi satu lagu, dan akan berhenti lebih awal jika demikian.
+31. Menginisialisasi flag swapped ke True untuk memulai loop pengurutan.
 32. -
-33. 
-34. 
-35. 
-36. 
-37. 
-38. 
-39. 
-40. 
+33. Memulai perulangan while yang berlanjut selama pertukaran terjadi.        Baris kosong untuk spasi. Memindahkan pointer saat ini ke node berikutnya.
+34. Mengatur ulang flag swapped menjadi False di awal setiap putaran.
+35. Mengatur pointer saat ini ke kepala daftar putar.
+36. Baris kosong untuk spasi.
+37. Memulai perulangan while dalam untuk menelusuri daftar selama ada node berikutnya.
+38. Membandingkan judul huruf kecil dari node saat ini dan node berikutnya untuk urutan abjad.
+39. Jika tidak berurutan, menukar judul node saat ini dan node berikutnya.
+40. Mengatur swapped menjadi True untuk menunjukkan pertukaran telah terjadi.
 41. 
 42. 
 43. 
