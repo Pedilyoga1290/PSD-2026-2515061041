@@ -42,49 +42,32 @@ Program ini bertujuan untuk mengurutkan lagu yang ada di playlist untuk berurut 
 34. Memulai perulangan while yang berlanjut selama pertukaran terjadi.
 35. Mengatur ulang flag swapped menjadi False di awal setiap putaran.
 36. Mengatur pointer saat ini ke kepala daftar putar.
-37. Baris kosong untuk spasi.
+37. -
 38. Memulai perulangan while dalam untuk menelusuri daftar selama ada node berikutnya.
 39. Membandingkan judul huruf kecil dari node saat ini dan node berikutnya untuk urutan abjad.
 40. Jika tidak berurutan, menukar judul node saat ini dan node berikutnya.
 41. Mengatur swapped menjadi True untuk menunjukkan pertukaran telah terjadi.
-42. Baris kosong untuk spasi.
+42. -
 43.  Memindahkan pointer saat ini ke node berikutnya.
 44. -
 45. Memulai definisi fungsi utama untuk menjalankan program.
-Memulai blok try untuk menangani potensi kesalahan input.
-Meminta pengguna untuk memasukkan jumlah lagu dan mengkonversi input ke bilangan bulat.
-Memulai blok except untuk menangkap ValueError jika input bukan angka.
-Mencetak pesan kesalahan untuk input yang tidak valid.
-Mengembalikan nilai dari fungsi jika input tidak valid.
-Membuat instance Playlist baru.
-Mencetak prompt untuk memasukkan judul lagu.
-Memulai perulangan for untuk mengulangi n kali untuk memasukkan lagu.
-Membaca judul lagu dari input pengguna.
-Menambahkan judul yang dimasukkan ke playlist.
-Mencetak pesan sebelum menampilkan playlist yang belum diurutkan.
-Menampilkan playlist saat ini.
-Memanggil bubble_sort untuk mengurutkan playlist.
-Mencetak pesan sebelum menampilkan playlist yang sudah diurutkan.
-Menampilkan playlist yang sudah diurutkan.
-Memeriksa apakah skrip dijalankan langsung (tidak diimpor).
-Memanggil fungsi utama jika kondisinya benar.
-46. 
-47. 
-48. 
-49. 
-50. 
-51. 
-52. 
-53. 
-54. 
-55. 
-56. 
-57. 
-58. 
-59. 
-60. 
-61. 
-62. 
+46. Memulai blok try untuk menangani potensi kesalahan input.
+47. Meminta pengguna untuk memasukkan jumlah lagu dan mengkonversi input ke bilangan bulat.
+48. Memulai blok except untuk menangkap ValueError jika input bukan angka.
+49. Mencetak pesan kesalahan untuk input yang tidak valid.
+50. Mengembalikan nilai dari fungsi jika input tidak valid.
+51. Membuat instance Playlist baru.
+52. Mencetak prompt untuk memasukkan judul lagu.
+53. Memulai perulangan for untuk mengulangi n kali untuk memasukkan lagu.
+54. Membaca judul lagu dari input pengguna.
+55. Menambahkan judul yang dimasukkan ke playlist.
+56. Mencetak pesan sebelum menampilkan playlist yang belum diurutkan.
+57. Menampilkan playlist saat ini.
+58. Memanggil bubble_sort untuk mengurutkan playlist.
+59. Mencetak pesan sebelum menampilkan playlist yang sudah diurutkan.
+60. Menampilkan playlist yang sudah diurutkan.
+61. Memeriksa apakah skrip dijalankan langsung (tidak diimpor).
+62. Memanggil fungsi utama jika kondisinya benar.
 
 Output Program :
 
