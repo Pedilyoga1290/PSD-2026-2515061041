@@ -36,21 +36,38 @@ Program ini bertujuan untuk mengurutkan lagu yang ada di playlist untuk berurut 
 28. -
 29. Memulai definisi fungsi bubble_sort untuk mengurutkan daftar putar secara alfabetis.
 30. Memeriksa apakah daftar putar kosong atau hanya berisi satu lagu, dan akan berhenti lebih awal jika demikian.
-31. Menginisialisasi flag swapped ke True untuk memulai loop pengurutan.
+31. Mengembalikan Fungsi ketika playlist kosong atau berisi satu lagu
 32. -
-33. Memulai perulangan while yang berlanjut selama pertukaran terjadi.        Baris kosong untuk spasi. Memindahkan pointer saat ini ke node berikutnya.
-34. Mengatur ulang flag swapped menjadi False di awal setiap putaran.
-35. Mengatur pointer saat ini ke kepala daftar putar.
-36. Baris kosong untuk spasi.
-37. Memulai perulangan while dalam untuk menelusuri daftar selama ada node berikutnya.
-38. Membandingkan judul huruf kecil dari node saat ini dan node berikutnya untuk urutan abjad.
-39. Jika tidak berurutan, menukar judul node saat ini dan node berikutnya.
-40. Mengatur swapped menjadi True untuk menunjukkan pertukaran telah terjadi.
-41. 
-42. 
-43. 
+33. Menginisialisasi flag swapped ke True untuk memulai loop pengurutan.
+34. Memulai perulangan while yang berlanjut selama pertukaran terjadi.
+35. Mengatur ulang flag swapped menjadi False di awal setiap putaran.
+36. Mengatur pointer saat ini ke kepala daftar putar.
+37. Baris kosong untuk spasi.
+38. Memulai perulangan while dalam untuk menelusuri daftar selama ada node berikutnya.
+39. Membandingkan judul huruf kecil dari node saat ini dan node berikutnya untuk urutan abjad.
+40. Jika tidak berurutan, menukar judul node saat ini dan node berikutnya.
+41. Mengatur swapped menjadi True untuk menunjukkan pertukaran telah terjadi.
+42. Baris kosong untuk spasi.
+43.  Memindahkan pointer saat ini ke node berikutnya.
 44. -
-45. 
+45. Memulai definisi fungsi utama untuk menjalankan program.
+Memulai blok try untuk menangani potensi kesalahan input.
+Meminta pengguna untuk memasukkan jumlah lagu dan mengkonversi input ke bilangan bulat.
+Memulai blok except untuk menangkap ValueError jika input bukan angka.
+Mencetak pesan kesalahan untuk input yang tidak valid.
+Mengembalikan nilai dari fungsi jika input tidak valid.
+Membuat instance Playlist baru.
+Mencetak prompt untuk memasukkan judul lagu.
+Memulai perulangan for untuk mengulangi n kali untuk memasukkan lagu.
+Membaca judul lagu dari input pengguna.
+Menambahkan judul yang dimasukkan ke playlist.
+Mencetak pesan sebelum menampilkan playlist yang belum diurutkan.
+Menampilkan playlist saat ini.
+Memanggil bubble_sort untuk mengurutkan playlist.
+Mencetak pesan sebelum menampilkan playlist yang sudah diurutkan.
+Menampilkan playlist yang sudah diurutkan.
+Memeriksa apakah skrip dijalankan langsung (tidak diimpor).
+Memanggil fungsi utama jika kondisinya benar.
 46. 
 47. 
 48. 
@@ -68,3 +85,7 @@ Program ini bertujuan untuk mengurutkan lagu yang ada di playlist untuk berurut 
 60. 
 61. 
 62. 
+
+Output Program :
+
+<img width="1133" height="244" alt="image" src="https://github.com/user-attachments/assets/c4fbd082-59ba-48f6-9da1-c8736ee9a947" />
