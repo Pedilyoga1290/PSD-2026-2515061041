@@ -72,3 +72,9 @@ Program ini bertujuan untuk mengurutkan lagu yang ada di playlist untuk berurut 
 Output Program :
 
 <img width="1133" height="244" alt="image" src="https://github.com/user-attachments/assets/c4fbd082-59ba-48f6-9da1-c8736ee9a947" />
+
+Penjelasan Output : 
+
+Pertama, pengguna memasukkan berapa banyak lagu yang diinginkan di dalam playlist. Lalu, pengguna diminta memasuki judul lagu dengan limit yang sudah ditentukan di fungsi sebelumnya. Ketika pengguna sudah memasukkan lagunya ke playlist, sistem akan secara otomatis menyortir judul lagu sesuai dengan abjad A-Z. Hasilnya adalah playlist yang rapih dan mengurut sesuai abjad.
+
+Link presentasi :
