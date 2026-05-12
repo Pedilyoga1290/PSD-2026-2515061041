@@ -49,5 +49,10 @@ Penjelasan Output :
 
 Pertama, sistem akan menampilkan nilai yang sudah tersedia dan mengurut, lalu, pengguna diminta untuk mengisi nilai yang akan dicari, lalu, sistem akan mencari nilai tengah atau median dari data nilai sampai nilai yang pengguna masukkan ketemu, dan akan ditmpilkan prosesnya dan nilai tersebut ditemukan di indeks ke berapa. Apabila user memasukkan angka yang tidak ada di data, sistem tetap mencari median dari data tersebut, namun di akhir proses, sistem akan mengeluarkan pesan "Nilai Yang Dicari Tidak Ditemukan".
 
-Link Presentasi :
+Link Presentasi : https://youtu.be/0Z6RKLHoU30
+
+Tugas Tulis Tangan : menggunakan pos = low + int(((target - data[low]) / (data[high] - data[low])) * (high - low)) untuk mencari estimasi posisi data di array
+
+<img width="1202" height="1600" alt="image" src="https://github.com/user-attachments/assets/01bbd251-3d0a-4c5f-995a-62e9533bec91" />
+
 
