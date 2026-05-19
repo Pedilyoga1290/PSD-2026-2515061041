@@ -83,4 +83,4 @@ Penjelasan output :
 
 Pengguna diminta untuk memasukkan angka antara 1 sampai 5. Apabila pengguna memilih nomor 1, pengguna akan diminta untuk memasukkan nama buku untuk dimasukkan ke dalam rak buku, dan buku tersebut dimasukkan ke bagian bawah rak buku. Apabila pengguna memilih nomor 2, pengguna dapat mengambil buku yang terakhir kali dimasukkan, kalau rak kosong dan pengguna tetap memilih nomor 2, akan keluar pesan "Rak buku Kosong, Tidak ada buku yang bisa diambil." Apabila pengguna memilih nomor 3, pengguna dapat melihat buku yang terakhir kali dimasukkan. Apabila pengguna memilih nomor 4, pengguna dapat melihat semua isi buku, berurutan dari bawah hingga atas. dan terakhir, pengguna dapat keluar dengan memilih nomor 5.
 
-Link Presentasi : 
+Link Presentasi : https://youtu.be/b1UjlVjHbP8
