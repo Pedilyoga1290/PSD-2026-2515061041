@@ -227,4 +227,4 @@ Pilihan 8 :
 
 <img width="308" height="203" alt="image" src="https://github.com/user-attachments/assets/fe679401-ce11-4513-92e9-b31219fc0ee9" />
 
-Link Presentasi : 
+Link Presentasi : https://youtu.be/qO4FXQT2JJA
