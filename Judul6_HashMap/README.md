@@ -148,3 +148,9 @@ Penjelasan kode :
 139. (kosong)
 140. Memeriksa apakah file dijalankan langsung sebagai program utama.
 141. Memanggil fungsi main jika file dijalankan langsung.
+
+Output Program : 
+
+<img width="541" height="473" alt="image" src="https://github.com/user-attachments/assets/04f950d0-5284-4db1-9c55-2b65f7915438" />
+
+Link Presentasi : 
